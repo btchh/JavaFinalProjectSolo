@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .pillar {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .example {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hospital Management System Documentation</h1>
+    
+    <section>
+        <h2>System Overview</h2>
+        <p>
+            The Hospital Management System (HMS) is a comprehensive Java-based application designed to manage various aspects of hospital operations. 
+            The system follows object-oriented principles and implements a service-oriented architecture to handle different hospital management tasks.
+        </p>
+    </section>
+
+    <section>
+        <h2>Architecture and Design</h2>
+        <p>
+            The system is organized into several key packages:
+        </p>
+        <ul>
+            <li><code>Entities/</code> - Contains domain model classes</li>
+            <li><code>Services/</code> - Houses business logic and service implementations</li>
+            <li><code>Interfaces/</code> - Defines contracts through interfaces</li>
+            <li><code>Enums/</code> - Contains enumeration types</li>
+            <li><code>Utils/</code> - Utility classes and helper functions</li>
+            <li><code>Main/</code> - Application entry point and control flow</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>The Four Pillars of Object-Oriented Programming</h2>
+        
+        <div class="pillar">
+            <h3>1. Encapsulation</h3>
+            <p>
+                Encapsulation in the HMS is implemented through private fields and public methods in entity classes. 
+                This principle is demonstrated in how the system handles sensitive data:
+            </p>
+            <div class="example">
+                Example: Patient records are encapsulated within the Patient class, with private fields for personal information 
+                and public methods for controlled access and modification.
+            </div>
+            <p>
+                Benefits in HMS:
+            </p>
+            <ul>
+                <li>Data security for patient information</li>
+                <li>Controlled access to medical records</li>
+                <li>Validation of data modifications</li>
+            </ul>
+        </div>
+
+        <div class="pillar">
+            <h3>2. Inheritance</h3>
+            <p>
+                The HMS utilizes inheritance to create a hierarchical structure of classes, promoting code reuse and establishing 
+                "is-a" relationships.
+            </p>
+            <div class="example">
+                Example: Both Doctor and Nurse classes inherit from a common Person class, sharing basic attributes while adding 
+                their specific functionalities.
+            </div>
+            <p>
+                Implementation in HMS:
+            </p>
+            <ul>
+                <li>Common attributes shared through base classes</li>
+                <li>Specialized behavior in derived classes</li>
+                <li>Hierarchical organization of medical staff</li>
+            </ul>
+        </div>
+
+        <div class="pillar">
+            <h3>3. Polymorphism</h3>
+            <p>
+                Polymorphism allows the HMS to handle different types of users and operations through common interfaces, 
+                making the system flexible and extensible.
+            </p>
+            <div class="example">
+                Example: The system treats different types of medical staff polymorphically through a common interface, 
+                allowing for unified handling of appointments and records.
+            </div>
+            <p>
+                Applications in HMS:
+            </p>
+            <ul>
+                <li>Method overriding for specialized behavior</li>
+                <li>Interface implementation for different service types</li>
+                <li>Dynamic method dispatch in user operations</li>
+            </ul>
+        </div>
+
+        <div class="pillar">
+            <h3>4. Abstraction</h3>
+            <p>
+                Abstraction is implemented through interfaces and abstract classes, hiding complex implementation details 
+                and providing clear, high-level interfaces.
+            </p>
+            <div class="example">
+                Example: The AppointmentService provides a high-level interface for scheduling appointments without exposing 
+                the complex underlying logic of time management and conflict resolution.
+            </div>
+            <p>
+                Benefits realized:
+            </p>
+            <ul>
+                <li>Simplified interaction with complex systems</li>
+                <li>Reduced code complexity</li>
+                <li>Improved maintainability</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Core Services</h2>
+        <p>
+            The HMS implements several key services:
+        </p>
+        <ul>
+            <li><strong>AppointmentService:</strong> Manages scheduling and tracking of medical appointments</li>
+            <li><strong>MedicalRecordService:</strong> Handles patient medical history and records</li>
+            <li><strong>PrescriptionService:</strong> Manages medication prescriptions and tracking</li>
+            <li><strong>AuthenticationService:</strong> Handles user authentication and security</li>
+            <li><strong>RBACService:</strong> Implements role-based access control</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Security and Access Control</h2>
+        <p>
+            The system implements robust security measures:
+        </p>
+        <ul>
+            <li>Role-based access control (RBAC) for different user types</li>
+            <li>Secure authentication mechanisms</li>
+            <li>Protected medical records access</li>
+            <li>Audit trails for sensitive operations</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>
+            <small>Hospital Management System Documentation - Created for educational purposes</small>
+        </p>
+    </footer>
+</body>
+</html> 
